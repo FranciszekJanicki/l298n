@@ -4,10 +4,8 @@ target_sources(l298n PRIVATE
     "l298n.c"
 )
 
-target_include_directories(l298n PUBLIC 
-)
-
-target_link_libraries(l298n PRIVATE
+target_include_directories(l298n PUBLIC
+    ${CMAKE_CURRENT_SOURCE_DIR}
 )
 
 target_compile_options(l298n PUBLIC
