@@ -5,6 +5,10 @@
 #include <stddef.h>
 #include <stdint.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef float float32_t;
 
 typedef enum {
@@ -57,5 +61,9 @@ typedef struct {
     uint32_t min_conversion;
     uint32_t max_conversion;
 } l298n_channel_config_t;
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif // L298N_L298N_CONFIG_H

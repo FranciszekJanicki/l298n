@@ -4,6 +4,10 @@
 #include "l298n_channel.h"
 #include "l298n_config.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef struct {
     l298n_channel_t channels[2];
 } l298n_t;
@@ -29,5 +33,9 @@ l298n_err_t l298n_set_soft_stop_direction(l298n_t const* l298n,
                                           l298n_channel_type_t type);
 l298n_err_t l298n_set_fast_stop_direction(l298n_t const* l298n,
                                           l298n_channel_type_t type);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif // L298N_L298N_H
